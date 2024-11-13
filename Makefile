@@ -4,7 +4,6 @@ submodule-update:
 	git submodule update --init --recursive
 
 all: submodule-update
-	module load system zlib sqlite
 	make -C tippecanoe all
 
 install:
