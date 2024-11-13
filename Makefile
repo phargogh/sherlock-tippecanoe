@@ -1,6 +1,7 @@
 .PHONY: all install
 
 all:
+	module load system zlib sqlite
 	make -C tippecanoe all
 
 install:
