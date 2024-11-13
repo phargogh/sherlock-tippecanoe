@@ -1,6 +1,9 @@
-.PHONY: all install
+.PHONY: all install submodule-update
 
-all:
+submodule-update:
+	git submodule update --init --recursive
+
+all: submodule-update
 	module load system zlib sqlite
 	make -C tippecanoe all
 
